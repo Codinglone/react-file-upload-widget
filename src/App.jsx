@@ -1,8 +1,9 @@
 import { Uploader } from "uploader";
 import { UploadButton } from "react-uploader";
 
+const api = JSON.stringify(import.meta.env.VITE_API_KEY)
 
-const uploader = Uploader({ apiKey:  JSON.stringify(import.meta.env.VITE_API_KEY)});
+const uploader = Uploader({ apiKey:  api.slice(1, 36)});
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
           ({onClick}) => <button onClick={onClick}>Upload a file...</button>
         }
       </UploadButton>
+      {/* {api.slice(1, 36)} */}
     </div>
   );
 }
