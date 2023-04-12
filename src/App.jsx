@@ -16,7 +16,6 @@ function App() {
           ({onClick}) => <button onClick={onClick}>Upload a file...</button>
         }
       </UploadButton>
-      {/* {api.slice(1, 36)} */}
     </div>
   );
 }
