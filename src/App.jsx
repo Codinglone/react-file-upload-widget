@@ -17,6 +17,8 @@ function App() {
           ({onClick}) => <button onClick={onClick}>Upload a file...</button>
         }
       </UploadButton>
+      <br />
+      <br />
       <Button />
     </div>
   );
