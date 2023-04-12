@@ -1,5 +1,6 @@
 import { Uploader } from "uploader";
 import { UploadButton } from "react-uploader";
+import Button from "./components/Button";
 
 const api = JSON.stringify(import.meta.env.VITE_API_KEY)
 
@@ -16,6 +17,7 @@ function App() {
           ({onClick}) => <button onClick={onClick}>Upload a file...</button>
         }
       </UploadButton>
+      <Button />
     </div>
   );
 }
