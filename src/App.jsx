@@ -1,10 +1,8 @@
-import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-dotenv.config()
 import { Uploader } from "uploader";
 import { UploadButton } from "react-uploader";
 
 
-const uploader = Uploader({ apiKey:  process.env.VITE_REACT_APP_API_KEY});
+const uploader = Uploader({ apiKey:  JSON.stringify(import.meta.env.VITE_API_KEY)});
 function App() {
   return (
     <div>
