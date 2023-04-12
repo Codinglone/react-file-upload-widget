@@ -1,7 +1,9 @@
+require('dotenv').config()
 import { Uploader } from "uploader";
 import { UploadButton } from "react-uploader";
 
-const uploader = Uploader({ apiKey: "public_12a1y8D7g6sCzJbMRTZZ4fKrw6gU" });
+
+const uploader = Uploader({ apiKey:  process.env.API_KEY});
 function App() {
   return (
     <div>
